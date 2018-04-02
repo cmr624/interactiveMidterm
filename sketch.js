@@ -407,7 +407,7 @@ class Interactive
 			}
 		}
 	}
-	//display ingredients/tools on top of interactable object
+	//display ingredients/tools on top of interactive object
 	display()
 	{
 		//display object
@@ -496,9 +496,9 @@ class Interactive
 //Timer: convert seconds to min
 function convertSeconds(s)
 {
-    var min = floor (s/60);
-    var sec = s % 60;
-    return nf(min,2) + ":" + nf(sec,2);
+  var min = floor (s/60);
+  var sec = s % 60;
+  return nf(min,2) + ":" + nf(sec,2);
 }
 
 
@@ -572,7 +572,8 @@ function draw()
 		fridgeObj.display();
 		fridgeObj.check(kirby);
 
-		//this is aggressive
+		//this is aggressive...
+		//i'm sorry Prof. Kapp!!! we promise to put this in an array later!!!!!
 		submission.display();
 		submission.check(kirby);
 		submitwords.display();
@@ -600,6 +601,8 @@ function draw()
 		tableObj3_middle2.check(kirby);
 		tableObj3_right.display();
 		tableObj3_right.check(kirby);
+
+		//this really breaks my CS heart...
 		stoveObj.display();
 		stoveObj.check(kirby);
 		stoveObj.action();
@@ -667,6 +670,7 @@ function draw()
 		text("We hope you had fun!!!", 610, tflyy);
 		flyy++;
 		tflyy++;
+		//this doesn't work to restart the game, it just resets the game world as it is currently.
 		if (keyIsDown(32))
 		{
 			state = 1;
